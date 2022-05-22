@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Headland+One&family=Lato:ital,wght@1,300&display=swap');
+
+*{
+
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+
+body{
+
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, rgb(255, 153, 233), rgb(255, 255, 104));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.heading{
+
+    
+    font-family: 'Lato', sans-serif;
+
+
+}
+
+
+.music-container{
+
+
+    background-color: blanchedalmond;
+    border-radius: 15px;
+    box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+
+    display: flex;
+    flex-direction: row;
+
+    padding: 20px 30px;
+
+    position: relative;    
+    z-index:10;
+    margin: 100px 0px;
+
+}
+
+.img-container{
+
+    position: relative;
+    width: 110px;
+
+
+}
+
+.cover{
+
+    width: inherit;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    animation: rotate 3s linear infinite;
+    animation-play-state: paused;
+}
+
+
+.music-container.play .cover{
+
+   animation-play-state: running;
+}
+
+@keyframes rotate{
+
+    from{
+
+        transform: rotate(0deg);
+    }
+
+    to{
+
+        transform: rotate(360deg);
+    }
+}
+
+.buttons{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin: 0 20px;
+}
+
+.button{
+
+    background-color: blanchedalmond;
+    border: 0;
+    color: rgb(166, 166, 255);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.play{
+
+    font-size: 40px;
+}
